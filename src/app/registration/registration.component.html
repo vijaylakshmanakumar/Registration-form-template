@@ -1,0 +1,93 @@
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Registration-form</title>
+<div class="container">
+  <div class="form">
+    <h2>Registration</h2>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+      <div class="formGroup">
+        <input
+          type="text"
+          name="firstname"
+          [(ngModel)]="firstname"
+          placeholder="Firstname"
+          autocomplete="off"
+        />
+      </div>
+      <div class="formGroup">
+        <input
+          type="text"
+          name="lastname"
+          [(ngModel)]="lastname"
+          placeholder="Lastname"
+          autocomplete="off"
+        />
+      </div>
+      <div class="formGroup">
+        <input
+          type="number"
+          name="age"
+          [(ngModel)]="age"
+          placeholder="Age"
+          autocomplete="off"
+        />
+      </div>
+      <div class="formGroup">
+        <input
+          type="email"
+          placeholder="Email ID"
+          name="email"
+          required
+          autocomplete="off"
+          [(ngModel)]="email"
+        />
+      </div>
+      <div class="formGroup">
+        <input
+          type="number"
+          placeholder="Phone-Number"
+          name="phone"
+          required
+          autocomplete="off"
+          [(ngModel)]="phone"
+        />
+      </div>
+      <div class="formGroup">
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          required
+          autocomplete="off"
+          [(ngModel)]="password"
+        />
+      </div>
+      <div class="formGroup">
+        <label for="">Gender</label>
+        <input
+          type="radio"
+          class="radio"
+          value="male"
+          name="gender"
+          [(ngModel)]="gender"
+          autocomplete="off"
+        />
+        Male
+        <input
+          type="radio"
+          value="female"
+          class="radio"
+          name="female"
+          [(ngModel)]="female"
+          autocomplete="off"
+        />
+        Female
+      </div>
+      <div class="formGroup">
+        <button type="submit" class="btn2">REGISTER</button>
+      </div>
+    </form>
+  </div>
+</div>
